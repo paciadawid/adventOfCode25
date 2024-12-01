@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "es2022",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "outDir": "dist",
+    "moduleResolution": "node"
+  },
+  "rules": {
+    "max-line-length": [
+      true,
+      {
+        "limit": 10,
+      }
+    ]
+  },
+  "include": [
+    "days/**/*"
+  ]
+}
