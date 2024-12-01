@@ -5,10 +5,10 @@ async function readFile(): Promise<number[][]> {
         const data = await fs.readFile('input.txt', 'utf-8');
         return data
             .split('\n')
-            .map(line => line
+            .map((line) => line
                 .trim()
                 .split('   ')
-                .map(number => parseInt(number, 10)));
+                .map((id) => parseInt(id, 10)));
     } catch (err) {
         console.error('Error reading the file:', err);
         return [];
@@ -16,22 +16,22 @@ async function readFile(): Promise<number[][]> {
 }
 
 const content: number[][] = await readFile();
-const list1 = content.map((list) => list[0])
+const list1 = content.map((list) => list[0]);
 list1.sort((a, b) => a - b);
-const list2 = content.map((list) => list[1])
+const list2 = content.map((list) => list[1]);
 list2.sort((a, b) => a - b);
 
-let sum = 0
+let sum = 0;
 
 for (let i = 0; i < list1.length; i++) {
     sum += Math.abs(list1[i] - list2[i]);
-    console.log(sum)
+    console.log(sum);
 }
 
 console.log(`Part 1: ${sum}`);
 
-sum = 0
+sum = 0;
 for (const id of list1) {
-    sum += list2.filter(number => number==id).length * id
+    sum += list2.filter((id2) => id2 === id).length *  id;
 }
 console.log(`Part 2: ${sum}`);
