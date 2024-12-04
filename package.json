@@ -1,5 +1,9 @@
 {
   "name": "adventOfCode25",
+  "jest": {
+    "verbose": true
+  },
+  "roots": ["days/"],
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -9,8 +13,10 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.16.0",
+    "@types/jest": "^29.5.14",
     "@types/lodash": "^4.17.13",
     "eslint": "^9.16.0",
+    "jest": "^29.7.0",
     "lodash": "^4.17.21",
     "ts-node": "^10.9.2",
     "tslint": "^5.20.1",

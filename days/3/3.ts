@@ -13,7 +13,6 @@ async function readFile(): Promise<string> {
 
 const memory = await readFile();
 
-console.log(memory);
 const validMultipliers: string[] | null = memory.match(/mul\(\d+,\d+\)/ig);
 
 let product = 0;
